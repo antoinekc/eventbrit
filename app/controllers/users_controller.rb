@@ -5,6 +5,10 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @users = User.all
+      respond_to do |format|
+        format.html # Render index.html.erb template
+        format.json { render json: @users } # Respond with JSON format
+      end
   end
 
   # GET /users/1 or /users/1.json
