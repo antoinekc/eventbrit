@@ -9,9 +9,5 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       t.timestamps
     end
   end
-
-  def change
-    add_reference :events, :user, foreign_key: true
-  end
-
 end
+
